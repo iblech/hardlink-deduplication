@@ -41,7 +41,7 @@ dir($base)->recurse(callback => sub {
     my $num_strong_duplicates = 0;
 
     my $postfix = $file;
-    $postfix =~ s/^\Q$base\E\///m;
+    $postfix =~ s/^\Q$base\E\///;
     for my $copy (@copies) {
         my $file_  = "$copy/$postfix";
         my @stat_  = stat $file_;
